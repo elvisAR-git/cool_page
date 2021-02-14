@@ -551,7 +551,7 @@ nav {
 .hs {
     display: grid;
     grid-gap: calc(var(--gutter) / 2);
-    grid-template-columns: repeat(6, calc(26% - var(--gutter) * 2));
+    grid-template-columns: repeat(6, calc(30% - var(--gutter) * 2));
     grid-template-rows: minmax(150px, 1fr);
 
     overflow-x: scroll;
@@ -567,8 +567,55 @@ nav {
 
 .app {
     width: 100%;
-    height: 650px;
+    height: auto;
     position: relative;
+    padding: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.services {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.faq {
+    padding: 3%;
+    padding-left: 6%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.faq h2 {
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+.faq p {
+    color: #f53398;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.faq .col-md-4 {
+    padding: 2%;
+    border-bottom: solid rgba(128, 128, 128, 0.516) 1px;
+    margin-right: 6%;
+}
+
+.services .card:hover {
+    box-shadow: none;
+}
+
+.services .card {
+    font-family: 'Josefin Sans', sans-serif !important;
 }
 
 .person {
@@ -592,7 +639,7 @@ nav {
 
 .person:hover {
     background-size: 120%;
-    box-shadow: 2px 3px 9px gray;
+    box-shadow: .6em .4em .9em .1em gray;
 }
 
 .person-holder {
@@ -612,6 +659,12 @@ nav {
     cursor: pointer;
     background-color: transparent;
     color: white;
+    transition: all .5s;
+}
+
+.rounded-outline-btn:hover {
+    color: rgb(255, 0, 140);
+    border: rgb(255, 0, 140) 1px solid;
 }
 
 .person-holder .person-name {
@@ -629,6 +682,7 @@ nav {
     padding: calc(var(--gutter) / 2 * 1.5);
     display: flex;
     flex-direction: column;
+    padding: 8%;
     height: 500px;
     justify-content: center;
     align-items: center;
