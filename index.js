@@ -9,29 +9,7 @@ window.onscroll = function () {
   }
 };
 
-function scrollToService(event) {
-  el = document.getElementById("services");
-  console.log(el);
-  el.scrollIntoView({ behavior: "smooth", block: "end" });
-}
 
-function scrollToProducts(event) {
-  el = document.getElementById("products");
-  console.log(el);
-  el.scrollIntoView({ behavior: "smooth", block: "end" });
-}
-
-function scrollToTeam(event) {
-  el = document.getElementById("team");
-  console.log(el);
-  el.scrollIntoView({ behavior: "smooth", block: "end" });
-}
-
-function scrollToFeedback(event) {
-  el = document.getElementById("feedback");
-  console.log(el);
-  el.scrollIntoView({ behavior: "smooth", block: "end" });
-}
 
 function showMobile(event) {
   var menu = document.getElementById("mobile-menu");

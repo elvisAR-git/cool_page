@@ -10,7 +10,11 @@ nav {
     padding: 1%;
     box-sizing: border-box;
     background-color: white;
-    z-index: 2;
+    z-index: 90;
+}
+
+.whitenav {
+    box-shadow: 2px 3px 9px gray;
 }
 
 nav h1 {
@@ -152,14 +156,14 @@ body {
 
 .carousel .title {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5vh;
+    font-size: 2.5em;
     color: white;
     font-weight: bolder;
 }
 
 .carousel .subtitle {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5vh;
+    font-size: 1.5em;
     color: white;
 }
 
@@ -204,6 +208,7 @@ body {
 .nav-link {
     font-weight: bold;
     transition: all .4s;
+    color: rgba(0, 0, 0, 0.579);
 }
 
 .nav-link:hover {
@@ -555,7 +560,7 @@ nav {
 .hs {
     display: grid;
     grid-gap: calc(var(--gutter) / 2);
-    grid-template-columns: repeat(6, calc(40% - var(--gutter) * 2));
+    grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
     grid-template-rows: minmax(150px, 1fr);
 
     overflow-x: scroll;
@@ -721,4 +726,271 @@ a:hover {
 .info blockquote {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 130%;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .wide-image img {
+        object-fit: none;
+        /* Do not scale the image */
+        object-position: center;
+        /* Center the image within the element */
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel-body {
+        position: absolute;
+        text-align: center;
+        left: 40px;
+        right: 40px;
+        top: 30%;
+        bottom: 70px;
+    }
+
+    .carousel .title {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .carousel .subtitle {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    .wide-image {
+        height: 450px;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .card-special {
+        border: none;
+    }
+
+    .carousel {
+        height: 500px;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .carousel img {
+        object-fit: none;
+        /* Do not scale the image */
+        object-position: center;
+        /* Center the image within the element */
+        height: 100%;
+        width: 100%;
+    }
+
+    .row {
+        display: block;
+        width: 100% !important;
+        position: relative;
+        text-align: center;
+    }
+
+    .col-md-4 {
+        width: 100% !important;
+        box-sizing: border-box;
+        min-width: 100%;
+        box-shadow: none !important;
+    }
+
+    .faq .col-md-4 {
+        width: 100% !important;
+        box-sizing: border-box;
+        min-width: 100%;
+        text-align: left;
+    }
+
+    .steps-row .col-md-4 {
+        width: 100% !important;
+        box-sizing: border-box;
+        min-width: 100%;
+        text-align: left;
+    }
+
+    .blog img {
+        height: 200px;
+        scale: .4;
+    }
+
+    .circle-2 {
+        display: none;
+    }
+
+    .blog {
+        width: 100%;
+        padding: 20px;
+        border-radius: .4rem;
+        margin: 19px;
+    }
+
+    nav {
+        width: max-content;
+    }
+
+    body {
+        width: auto;
+        text-align: center !important;
+    }
+
+    .info .services .products {
+        font-family: "Tajawal" !important;
+    }
+
+    .nav {
+        display: none !important;
+    }
+
+    .blog:after {
+        content: "";
+        background-color: rgba(2, 56, 233, 0.342);
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        border-radius: 50%;
+        opacity: .3;
+        transform: scale(0);
+        top: 32%;
+        left: 35%;
+        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: -3;
+    }
+
+    #menu {
+        display: inline-block !important;
+
+        cursor: pointer;
+        padding: 1px;
+        border-radius: 1px;
+    }
+
+    #menu:active {
+        box-shadow: 1px 3px .1rem rgba(220, 220, 220, 0.493);
+
+    }
+
+    .mobile-menu {
+
+        display: none !important;
+        position: absolute;
+        background-color: rgb(252, 255, 249);
+        width: 100%;
+        padding: 10px;
+        top: 65px;
+        animation-name: fade-in;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        left: 0;
+        height: max-content;
+    }
+
+    .mobile-menu li {
+        padding: 4px;
+        display: block !important;
+        width: 100%;
+    }
+
+
+    .hs>li,
+    .item {
+
+        padding: calc(var(--gutter) / 2 * 1.5);
+
+        margin-right: 1% !important;
+        padding: 8%;
+        height: 500px;
+        background: #fff;
+        border-radius: 8px;
+    }
+
+
+    .hs {
+        display: flex;
+        grid-gap: calc(var(--gutter) / 2);
+        grid-template-columns: repeat(2, calc(100% - var(--gutter) * 2));
+        grid-template-rows: minmax(150px, 1fr);
+
+        overflow-x: scroll;
+        scroll-snap-type: x proximity;
+        padding-bottom: calc(.75 * var(--gutter));
+        margin-bottom: calc(-.25 * var(--gutter));
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+    }
+
+    .steps-card .card-title {
+        font-weight: bold;
+        font-size: 5.7vw;
+
+    }
+
+    .steps-card .count {
+        font-size: 5em !important;
+        opacity: .3;
+    }
+
+    .steps-row {
+        padding-bottom: 4em !important;
+    }
+
+    body::before {
+        display: none;
+    }
+
+    .nav-item a:active:hover {
+        text-decoration: none !important;
+    }
+
+    .nav-item {
+        padding: 15px !important;
+    }
+
+}
+
+
+
+
+@keyframes fade-in {
+
+    0% {
+        top: 50px;
+    }
+
+    100% {
+        top: 65px;
+    }
+
+}
+
+#menu {
+    width: 2em;
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+.mobile-menu {
+    display: none;
+
+
 }
